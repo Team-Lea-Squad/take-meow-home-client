@@ -11,101 +11,148 @@ module.exports = {
         inter: ["Inter", "sans-serif"]
       },
       fontSize: {
-        "head-title": [
+        "head-120-B": [
           "24px",
           {
-            lineHeight: "120%",
-            fontWeight: "Bold",
-            letterSpacing: "-0.03em"
-          }
-        ],
-        "title-title-M": [
-          "18px",
-          {
-            lineHeight: "150%",
-            fontWeight: "700",
+            lineHeight: "28px",
+            fontWeight: "bold",
             letterSpacing: "0"
           }
         ],
-        "title1-title": [
-          "18px",
+        "head-sub": [
+          "22px",
           {
-            lineHeight: "120%",
-            fontWeight: "700",
-            letterSpacing: "0",
-            color: "red"
+            lineHeight: "28px",
+            fontWeight: "bold",
+            letterSpacing: "0"
           }
         ],
-        "title-title": [
+
+        "title-120-B": [
           "18px",
           {
-            lineHeight: "21.6px",
+            lineHeight: "24px",
+            fontWeight: "bold",
+            letterSpacing: "0"
+          }
+        ],
+        "title-150-B": [
+          "18px",
+          {
+            lineHeight: "28px",
+            fontWeight: "bold",
+            letterSpacing: "0"
+          }
+        ],
+        "body-120-B": [
+          "16px",
+          {
+            lineHeight: "20px",
+            fontWeight: "bold",
+            letterSpacing: "0"
+          }
+        ],
+        "body-150-B": [
+          "16px",
+          {
+            lineHeight: "24px",
+            fontWeight: "bold",
+            letterSpacing: "0"
+          }
+        ],
+        "body-120-M": [
+          "16px",
+          {
+            lineHeight: "20px",
+            fontWeight: "500",
+            letterSpacing: "0"
+          }
+        ],
+        "body-120-R": [
+          "16px",
+          {
+            lineHeight: "20px",
             fontWeight: "400",
-            letterSpacing: "0",
-            color: "#19191B"
+            letterSpacing: "0"
           }
         ],
-        "body-title": [
+        "body-150-R": [
           "16px",
           {
-            lineHeight: "120%",
+            lineHeight: "24px",
+            fontWeight: "400",
+            letterSpacing: "0"
+          }
+        ],
+        "paragraph-120-B": [
+          "14px",
+          {
+            lineHeight: "16px",
             fontWeight: "bold",
             letterSpacing: "0"
           }
         ],
-        "body-input-label": [
-          "16px",
-          {
-            lineHeight: "120%",
-            fontWeight: "medium",
-            letterSpacing: "0"
-          }
-        ],
-        "body-150": [
-          "16px",
-          {
-            lineHeight: "150%",
-            fontWeight: "regular",
-            letterSpacing: "0"
-          }
-        ],
-        "body-120": [
-          "16px",
-          {
-            lineHeight: "120%",
-            fontWeight: "regular",
-            letterSpacing: "0"
-          }
-        ],
-        "paragraph-150": [
+        "paragraph-150-B": [
           "14px",
           {
-            lineHeight: "150%",
-            fontWeight: "regular",
-            letterSpacing: "0"
-          }
-        ],
-        "paragraph-120": [
-          "14px",
-          {
-            lineHeight: "120%",
-            fontWeight: "regular",
-            letterSpacing: "0"
-          }
-        ],
-        "paragraph-title": [
-          "14px",
-          {
-            lineHeight: "120%",
+            lineHeight: "20px",
             fontWeight: "bold",
             letterSpacing: "0"
           }
         ],
-        "caption-120": [
+        "paragraph-150-M": [
+          "14px",
+          {
+            lineHeight: "20px",
+            fontWeight: "500",
+            letterSpacing: "0"
+          }
+        ],
+        "paragraph-120-R": [
+          "14px",
+          {
+            lineHeight: "16px",
+            fontWeight: "400",
+            letterSpacing: "0"
+          }
+        ],
+        "paragraph-150-R": [
+          "14px",
+          {
+            lineHeight: "20px",
+            fontWeight: "400",
+            letterSpacing: "0"
+          }
+        ],
+        "caption-120-B": [
           "12px",
           {
+            lineHeight: "14px",
+            fontWeight: "bold",
+            letterSpacing: "0"
+          }
+        ],
+        "caption-120-R": [
+          "12px",
+          {
+            lineHeight: "14px",
+            fontWeight: "400",
+            letterSpacing: "0"
+          }
+        ],
+        "onboarding-bold": [
+          "42px",
+          {
             lineHeight: "120%",
-            fontWeight: "regular",
+            fontWeight: "bold",
+            letterSpacing: "0"
+          }
+        ],
+        "onboarding-light": [
+          "36px",
+          {
+            lineHeight: "120%",
+            fontWeight: "300",
             letterSpacing: "0"
           }
         ]

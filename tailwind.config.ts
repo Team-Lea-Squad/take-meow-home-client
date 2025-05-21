@@ -111,35 +111,46 @@ module.exports = {
         ]
       },
       colors: {
+        scheme: {
+          100: "#FFFFFF",
+          200: "#F5F6F7",
+          300: "#EDF0F3",
+          400: "#E0E5EA",
+          500: "#C6CCD1",
+          600: "#A6ABAF",
+          700: "#7B8287",
+          800: "#494F54",
+          900: "#25292C",
+          1000: "#191B1C"
+        },
         text: {
           error: "#FA685F",
-          title: "#272E41",
-          text: "#515860",
-          dark: "#555564",
-          lite: "#999ba9",
-          disabled: "#dcdeeb"
+          white: "#FFFFFF",
+          disabled: "#C6CCD1",
+          lite: "#A6ABAF",
+          dark: "#494F54",
+          black: "#494F54"
         },
         background: {
-          DEFAULT: "#FCFDFF"
+          white: "#FFFFFF",
+          container: "#FFFFFF",
+          gray: "#F5F6F7",
+          chips: "#E0E5EA",
+          placeholder: "#E0E5EA",
+          focus: "#191B1C"
+        },
+        icon: {
+          white: "#FFFFFF",
+          lite: "#A6ABAF",
+          dark: "#494F54",
+          black: "#191B1C"
         },
         line: {
-          DEFAULT: "fff",
-          focus: "#555564",
-          dark: "#999ba9",
-          medium: "#dcdeeb",
-          lite: "#eaeef3",
-          white: "#fff"
-        },
-        system: {
-          main: "#3182F6s",
-          "m-text": "#515860",
-          "blue-300": "#173ab6",
-          "green-100": "#e8f5e5",
-          "green-200": "#b9e1b2",
-          "green-300": "##169b00",
-          "orange-100": "#fff8e5",
-          "orange-200": "#ffeab2",
-          "orange-300": "#d98f00"
+          white: "#FFFFFF",
+          lite: "#EDF0F3",
+          medium: "#E0E5EA",
+          dark: "#494F54",
+          focus: "#25292C"
         }
       }
     },

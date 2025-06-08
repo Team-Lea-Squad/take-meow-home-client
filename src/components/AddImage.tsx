@@ -61,7 +61,6 @@ const AddImage = ({ label }: { label: string }) => {
                   src={item.src}
                   alt={`uploaded-${idx}`}
                   width={160}
-                  ㅌ
                   height={160}
                   className="object-cover"
                 />

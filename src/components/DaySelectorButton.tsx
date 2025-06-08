@@ -14,7 +14,7 @@ const DaySelectorButton = () => {
 
   return (
     <div className="flex flex-col gap-2 w-full">
-      <div className="flex gap-[2px]">
+      <div className="flex gap-[2px] text-paragraph-120-B">
         <p>운영시간</p>
         <p className="text-text-error">*</p>
       </div>
@@ -26,7 +26,7 @@ const DaySelectorButton = () => {
               key={day}
               type="button"
               onClick={() => toggleDay(day)}
-              className={`flex-1 min-w-[40px] py-2 text-center rounded text-paragraph-120-R ${
+              className={`flex-1 min-w-[40px] py-2 text-center rounded-[8px] text-paragraph-120-R ${
                 isSelected
                   ? "bg-background-focus text-text-white"
                   : "bg-background-gray text-text-title hover:bg-gray-200"

@@ -174,6 +174,26 @@ module.exports = {
         ]
       },
       colors: {
+        white: "#FFFFFF",
+        black: "#000000",
+        background: {
+          DEFAULT: "#FFFFFF",
+          white: "#FFFFFF",
+          container: "#FFFFFF",
+          gray: "#F5F6F7",
+          chips: "#E0E5EA",
+          placeholder: "#E0E5EA",
+          focus: "#191B1C"
+        },
+        text: {
+          error: "#FA685F",
+          white: "#FFFFFF",
+          disabled: "#C6CCD1",
+          lite: "#A6ABAF",
+          dark: "#494F54",
+          black: "#494F54",
+          title: "#A6ABAF"
+        },
         scheme: {
           100: "#FFFFFF",
           200: "#F5F6F7",
@@ -185,22 +205,6 @@ module.exports = {
           800: "#494F54",
           900: "#25292C",
           1000: "#191B1C"
-        },
-        text: {
-          error: "#FA685F",
-          white: "#FFFFFF",
-          disabled: "#C6CCD1",
-          lite: "#A6ABAF",
-          dark: "#494F54",
-          black: "#494F54"
-        },
-        background: {
-          white: "#FFFFFF",
-          container: "#FFFFFF",
-          gray: "#F5F6F7",
-          chips: "#E0E5EA",
-          placeholder: "#E0E5EA",
-          focus: "#191B1C"
         },
         icon: {
           white: "#FFFFFF",
@@ -299,6 +303,23 @@ module.exports = {
           900: "#25292c",
           1000: "#191b1c"
         }
+      },
+      spacing: {
+        100: "0rem",
+        200: "0.125rem",   // 2px
+        300: "0.25rem",    // 4px
+        400: "0.5rem",     // 8px
+        500: "0.75rem",    // 12px
+        600: "1rem",       // 16px
+        700: "1.25rem",    // 20px
+        800: "1.5rem",     // 24px
+        900: "1.75rem",    // 28px
+        1000: "2rem",      // 32px
+        1100: "2.5rem",    // 40px
+        1200: "3rem",      // 48px
+        1300: "3.5rem",    // 56px
+        1400: "4rem",      // 64px
+        1500: "5rem",      // 80px
       }
     },
     plugins: []

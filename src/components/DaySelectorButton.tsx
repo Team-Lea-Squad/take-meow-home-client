@@ -14,7 +14,7 @@ const DaySelectorButton = () => {
 
   return (
     <div className="flex flex-col gap-2 w-full">
-      <div className="flex gap-[2px] text-paragraph-120-B">
+      <div className="flex gap-[2px] text-paragraph-120-B text-text-dark">
         <p>운영시간</p>
         <p className="text-text-error">*</p>
       </div>

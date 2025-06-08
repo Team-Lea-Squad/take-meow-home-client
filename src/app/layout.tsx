@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import BottomButton from "@/components/BottomButton";
 import DaySelectorButton from "@/components/DaySelectorButton";
+import Address from "@/components/Address";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,8 +32,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background-white`}
       >
         <Header />
-        <div className="p-600 flex flex-col w-full ">
+        <div className="px-600 flex flex-col w-full py-900 gap-700">
           <DaySelectorButton />
+          <Address />
           {children}
         </div>
         <div>

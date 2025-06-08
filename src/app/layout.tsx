@@ -8,6 +8,7 @@ import Address from "@/components/Address";
 import AddressSelector from "@/components/AddressSelector";
 import InputForm from "@/components/InputForm";
 import AddImage from "@/components/AddImage";
+import BottomSheetWrapper from "@/components/BottomSheetWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +37,7 @@ export default function RootLayout({
       >
         <Header />
         <div className="px-600 flex flex-col w-full py-900 gap-700 mt-14">
-          <DaySelectorButton />
+          {/* <DaySelectorButton />
           <Address />
           <AddressSelector />
           <InputForm
@@ -61,7 +62,8 @@ export default function RootLayout({
             isRequired
             isNumber
           />
-          <AddImage label="보호소 이미지" />
+
+          <AddImage label="보호소 이미지" /> */}
 
           {children}
         </div>

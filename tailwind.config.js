@@ -191,7 +191,8 @@ module.exports = {
           disabled: "#C6CCD1",
           lite: "#A6ABAF",
           dark: "#494F54",
-          black: "#494F54"
+          black: "#494F54",
+          title: "#A6ABAF"
         },
         scheme: {
           100: "#FFFFFF",

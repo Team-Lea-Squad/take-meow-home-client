@@ -2,10 +2,12 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { useAddressStore } from "@/store/addressStore";
 
 const AddressSelector: React.FC = () => {
   const [value, setValue] = useState("");
   const [isFocused, setIsFocused] = useState(false);
+  const { setSelectedAddress } = useAddressStore();
 
   const addressExamples = [
     {
@@ -62,8 +64,11 @@ const AddressSelector: React.FC = () => {
 
       <div className="flex flex-col gap-4 text-text-dark">
         {value ? (
-          <div>
+          <div className="flex flex-col gap-2">
             <p className="text-paragraph-120-B">검색 결과</p>
+            <div className="flex flex-col gap-2">
+              <p onClick={() => setSelectedAddress(value)}>{value}</p>
+            </div>
           </div>
         ) : (
           <div className="flex flex-col gap-4">

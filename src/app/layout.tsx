@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import BottomButton from "@/components/BottomButton";
 import DaySelectorButton from "@/components/DaySelectorButton";
 import Address from "@/components/Address";
+import AddressSelector from "@/components/AddressSelector";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
         <div className="px-600 flex flex-col w-full py-900 gap-700">
           <DaySelectorButton />
           <Address />
+          <AddressSelector />
           {children}
         </div>
         <div>

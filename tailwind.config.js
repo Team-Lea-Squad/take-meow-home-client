@@ -176,6 +176,7 @@ module.exports = {
       colors: {
         white: "#FFFFFF",
         black: "#000000",
+        primary: "#00CC51",
         background: {
           DEFAULT: "#FFFFFF",
           white: "#FFFFFF",

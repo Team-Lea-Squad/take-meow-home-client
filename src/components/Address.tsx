@@ -14,7 +14,7 @@ const Address = () => {
         <p className="text-text-error">*</p>
       </div>
       <div className="flex flex-col w-full border border-line-medium rounded-lg overflow-hidden">
-        <div className="flex items-center w-full p-600 border-b border-line-medium justify-between">
+        <div className="flex items-center w-full p-600 border-b border-line-medium justify-between cursor-pointer">
           <div>서울 성동구 행당동 318-36</div>
           {/** 주소 검색 router 이동 다시 해야됨*/}
           <Image

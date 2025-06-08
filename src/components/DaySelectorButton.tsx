@@ -37,6 +37,15 @@ const DaySelectorButton = () => {
           );
         })}
       </div>
+      <div className="flex gap-2 w-full items-center text-text-lite">
+        <div className="rounded-lg h-14 p-600 border border-line-medium w-full">
+          시작 시간
+        </div>
+        <p>-</p>
+        <div className="rounded-lg h-14 p-600 border border-line-medium w-full">
+          종료 시간
+        </div>
+      </div>
     </div>
   );
 };

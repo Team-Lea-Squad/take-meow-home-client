@@ -16,7 +16,6 @@ const Page = () => {
     business: ""
   });
 
-  // 모든 값이 비어있지 않은지 체크
   const isAllFilled = Object.values(inputs).every((v) => v.trim() !== "");
 
   return (
@@ -56,7 +55,11 @@ const Page = () => {
       />
       <AddImage label="보호소 이미지" />
       <div>
-        <BottomButton buttonTitle="확인" disabled={!isAllFilled} />
+        <BottomButton
+          buttonTitle="등록하기"
+          disabled={!isAllFilled}
+          path="/shelter/register/completed"
+        />
       </div>
     </div>
   );

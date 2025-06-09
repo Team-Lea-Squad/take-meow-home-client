@@ -23,16 +23,6 @@ const InputForm = ({
   const [, setValue] = useState("");
   const [isFocused, setIsFocused] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = e.target.value;
-    if (isNumber) {
-      const numericValue = newValue.replace(/[^0-9]/g, "");
-      setValue(numericValue);
-    } else {
-      setValue(newValue);
-    }
-  };
-
   return (
     <div className="flex gap-2 w-full flex-col">
       <div className="flex gap-1 items-center">
@@ -45,12 +35,19 @@ const InputForm = ({
         }`}
       >
         <input
-          type="text"
+          type={isNumber ? "number" : "text"}
           inputMode={isNumber ? "numeric" : "text"}
           placeholder={placeholder}
           className="placeholder:text-text-lite text-text-dark focus:outline-none w-full"
           value={value}
-          onChange={onChange ? onChange : handleChange}
+          onChange={(e) => {
+            if (isNumber) {
+              const onlyNumber = e.target.value.replace(/[^0-9]/g, "");
+              onChange?.({ ...e, target: { ...e.target, value: onlyNumber } });
+            } else {
+              onChange?.(e);
+            }
+          }}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
         />

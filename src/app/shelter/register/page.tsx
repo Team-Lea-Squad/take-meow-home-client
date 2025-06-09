@@ -16,7 +16,6 @@ const Page = () => {
     business: ""
   });
 
-  // 모든 값이 비어있지 않은지 체크
   const isAllFilled = Object.values(inputs).every((v) => v.trim() !== "");
 
   return (

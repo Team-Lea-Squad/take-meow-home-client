@@ -8,6 +8,8 @@ export default function Home() {
       <SubTab />
       <CommonButton title="테스트버튼" isDisabled />
       <CommonButton title="테스트버튼" isPoint />
+      <CommonButton title="테스트버튼" />
+      <CommonButton title="테스트버튼" isLoading />
       <CommonBorderButton title="버튼" isBlack />
       <CommonBorderButton title="버튼" isPrimary />
       <CommonBorderButton title="버튼" />

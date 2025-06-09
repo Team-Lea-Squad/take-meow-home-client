@@ -1,10 +1,26 @@
 "use client";
 import React from "react";
 
-const MainTitle = ({ mainTitle }: { mainTitle: string }) => {
+interface MainTitleProps {
+  mainTitle: string;
+  name?: string;
+}
+
+const MainTitle = ({ mainTitle, name = "" }: MainTitleProps) => {
   return (
-    <div className="whitespace-pre-line flex items-center text-head-sub text-text-black py-1000 ">
-      {mainTitle}
+    <div className="">
+      {name ? (
+        <>
+          <div className="text-head-sub text-text-black font-bold">
+            {name} 보호소님,
+          </div>
+          <div className="text-head-sub text-text-black">{mainTitle}</div>
+        </>
+      ) : (
+        <div className="text-head-sub text-text-black whitespace-pre">
+          {mainTitle}
+        </div>
+      )}
     </div>
   );
 };

@@ -324,6 +324,15 @@ module.exports = {
         1300: "3.5rem",    // 56px
         1400: "4rem",      // 64px
         1500: "5rem",      // 80px
+      },
+      keyframes: {
+        opacity: {
+          '0%, 100%': { opacity: '0.6' },
+          '50%': { opacity: '1' }
+        }
+      },
+      animation: {
+        opacity: 'opacity 1.5s ease-in-out infinite'
       }
     },
     plugins: []

@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import RegisterCatCard from "@/components/RegisterCatCard";
 import AdoptionScheduleCard from "@/components/AdoptionScheduleCard";
 import TodayHighlightsCard from "@/components/TodayHighlightsCard";
+import ButlerSelectionWrapper from "@/components/ButlerSelectionWrapper";
 
 const Page = () => {
   const router = useRouter();
@@ -25,6 +26,7 @@ const Page = () => {
       <RegisterCatCard />
       <AdoptionScheduleCard pendingCount={10} inProgressCount={20} />
       <TodayHighlightsCard />
+      <ButlerSelectionWrapper />
     </div>
   );
 };

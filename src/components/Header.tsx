@@ -17,7 +17,7 @@ const Header = () => {
   })();
 
   return (
-    <div className="w-full h-16 bg-background-white text-text-dark p-600 flex justify-between items-center fixed top-0 z-10">
+    <div className="w-full h-16 bg-background-white text-text-dark p-600 flex justify-between items-center fixed top-0 z-3">
       <div className="flex gap-400 text-body-120-M items-center">
         {!isLogin && (
           <Image

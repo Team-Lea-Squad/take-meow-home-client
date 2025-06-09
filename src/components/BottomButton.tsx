@@ -1,26 +1,25 @@
 "use client";
 
 import React from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
-const BottomButton = ({
-  buttonTitle,
-  disabled,
-  onClick
-}: {
+interface BottomButtonProps {
   buttonTitle: string;
   disabled?: boolean;
-  onClick?: () => void;
+  path?: string;
+}
+
+const BottomButton: React.FC<BottomButtonProps> = ({
+  buttonTitle,
+  disabled,
+  path = "/"
 }) => {
   const router = useRouter();
-  const pathname = usePathname();
-
-  if (pathname === "/login") return null;
 
   return (
     <button
       className={`fixed bottom-0 left-0 right-0 px-600 h-[84px] flex justify-center items-center`}
-      onClick={onClick ? onClick : () => router.push("/")}
+      onClick={() => router.push(path)}
       disabled={disabled}
     >
       <div

@@ -1,9 +1,12 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import CommonButton from "./CommonButton";
 
 const BottomSheetContent = () => {
+  const [isAllAgree, setIsAllAgree] = useState(false);
+  const [isAgree, setIsAgree] = useState(false);
+
   return (
     <div className="flex flex-col justify-between h-full">
       <div className="w-full p-600 items-center">
@@ -55,7 +58,7 @@ const BottomSheetContent = () => {
           </div>
         </div>
         <div className="w-full p-600">
-          <CommonButton />
+          <CommonButton title="시작하기" />
         </div>
       </div>
     </div>

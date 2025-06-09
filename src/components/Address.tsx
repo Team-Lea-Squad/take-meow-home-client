@@ -20,7 +20,11 @@ const Address = () => {
           className="flex items-center w-full p-600 border-b border-line-medium justify-between cursor-pointer gap-2"
           onClick={() => router.push("/shelter/register/find-address")}
         >
-          <div className="w-full text-text-lite">
+          <div
+            className={`w-full ${
+              selectedAddress ? "text-text-black" : "text-text-lite"
+            }`}
+          >
             {selectedAddress || "보호소 주소 검색"}
           </div>
 

@@ -8,15 +8,19 @@ interface InputFormProps {
   placeholder: string;
   isRequired?: boolean;
   isNumber?: boolean;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const InputForm = ({
   label,
   placeholder = "",
   isRequired = false,
-  isNumber = false
+  isNumber = false,
+  value = "",
+  onChange
 }: InputFormProps) => {
-  const [value, setValue] = useState("");
+  const [, setValue] = useState("");
   const [isFocused, setIsFocused] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -46,7 +50,7 @@ const InputForm = ({
           placeholder={placeholder}
           className="placeholder:text-text-lite text-text-dark focus:outline-none w-full"
           value={value}
-          onChange={handleChange}
+          onChange={onChange ? onChange : handleChange}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
         />

@@ -31,7 +31,7 @@ const AddImage = ({ label }: { label: string }) => {
   return (
     <div className="flex flex-col gap-2">
       <p className="text-paragraph-120-B">{label}</p>
-      <div className="flex gap-3">
+      <div className="flex gap-3  mb-20">
         <div className="w-40 h-40 border rounded-lg flex flex-col justify-center items-center border-line-medium text-body-120-R text-text-lite gap-2 cursor-pointer relative overflow-hidden shrink-0">
           <p>사진 · 영상 추가</p>
           <Image
@@ -49,7 +49,7 @@ const AddImage = ({ label }: { label: string }) => {
           />
         </div>
 
-        <div className="flex gap-2 overflow-x-auto">
+        <div className="flex gap-2 overflow-x-auto hide-scrollbar">
           {media.map((item, idx) => (
             <div
               key={idx}

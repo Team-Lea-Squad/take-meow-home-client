@@ -3,12 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import BottomButton from "@/components/BottomButton";
-import DaySelectorButton from "@/components/DaySelectorButton";
-import Address from "@/components/Address";
-import AddressSelector from "@/components/AddressSelector";
-import InputForm from "@/components/InputForm";
-import AddImage from "@/components/AddImage";
-import BottomSheetWrapper from "@/components/BottomSheetWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,38 +31,7 @@ export default function RootLayout({
       >
         <Header />
         <div className="px-600 flex flex-col w-full py-900 gap-700 mt-14">
-          {/* <DaySelectorButton />
-          <Address />
-          <AddressSelector />
-          <InputForm
-            label="보호소명"
-            placeholder="보호소명을 입력해주세요"
-            isRequired
-          />
-          <InputForm
-            label="대표자명"
-            placeholder="대표자명을 입력해주세요"
-            isRequired
-          />
-          <InputForm
-            label="연락처"
-            placeholder="보호소 연락처를 입력해주세요"
-            isRequired
-            isNumber
-          />
-          <InputForm
-            label="사업자등록번호"
-            placeholder="사업자등록번호가 있으신 경우 입력해주세요"
-            isRequired
-            isNumber
-          />
-
-          <AddImage label="보호소 이미지" /> */}
-
           {children}
-        </div>
-        <div>
-          <BottomButton buttonTitle="확인" />
         </div>
       </body>
     </html>

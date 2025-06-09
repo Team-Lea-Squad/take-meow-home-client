@@ -3,21 +3,32 @@
 import React from "react";
 import { useRouter, usePathname } from "next/navigation";
 
-const BottomButton = ({ buttonTitle }: { buttonTitle: string }) => {
+const BottomButton = ({
+  buttonTitle,
+  disabled,
+  onClick
+}: {
+  buttonTitle: string;
+  disabled?: boolean;
+  onClick?: () => void;
+}) => {
   const router = useRouter();
   const pathname = usePathname();
 
   if (pathname === "/login") return null;
 
   return (
-    <div
-      className="w-full flex justify-center items-center text-body-120-R h-[84px] fixed bottom-0 p-600"
-      onClick={() => router.push("/")}
+    <button
+      className={`fixed bottom-0 left-0 right-0 px-600 h-[84px] flex justify-center items-center ${
+        disabled ? "opacity-50 pointer-events-none" : ""
+      }`}
+      onClick={onClick ? onClick : () => router.push("/")}
+      disabled={disabled}
     >
-      <div className="flex w-full justify-center items-center bg-black text-text-white text-body-120-R h-[52px] rounded-[12px]">
+      <div className="w-full bg-black text-text-white text-body-120-R h-[52px] rounded-[12px] flex justify-center items-center">
         {buttonTitle}
       </div>
-    </div>
+    </button>
   );
 };
 

@@ -182,7 +182,7 @@ module.exports = {
           white: "#FFFFFF",
           container: "#FFFFFF",
           gray: "#F5F6F7",
-          chips: "#E0E5EA",
+          chips: "#F5F6F7",
           placeholder: "#E0E5EA",
           focus: "#191B1C"
         },

@@ -3,7 +3,9 @@ import React from "react";
 import MainTitle from "@/components/MainTitle";
 import { mainTitles } from "@/utils/titleAssets";
 import { useRouter } from "next/navigation";
-import RegisterCatBanner from "@/components/RegisterCatCard";
+import RegisterCatCard from "@/components/RegisterCatCard";
+import AdoptionScheduleCard from "@/components/AdoptionScheduleCard";
+import TodayHighlightsCard from "@/components/TodayHighlightsCard";
 
 const Page = () => {
   const router = useRouter();
@@ -20,7 +22,9 @@ const Page = () => {
           보호소 정보보기
         </div>
       </div>
-      <RegisterCatBanner />
+      <RegisterCatCard />
+      <AdoptionScheduleCard pendingCount={10} inProgressCount={20} />
+      <TodayHighlightsCard />
     </div>
   );
 };

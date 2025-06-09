@@ -156,6 +156,22 @@ module.exports = {
             letterSpacing: "0"
           }
         ],
+        "caption-100-B": [
+          "10px",
+          {
+            lineHeight: "12px",
+            fontWeight: "bold",
+            letterSpacing: "0"
+          }
+        ],
+        "caption-100-R": [
+          "10px",
+          {
+            lineHeight: "12px",
+            fontWeight: "400",
+            letterSpacing: "0"
+          }
+        ],
         "onboarding-bold": [
           "42px",
           {

@@ -177,6 +177,7 @@ module.exports = {
         white: "#FFFFFF",
         black: "#000000",
         primary: "#00CC51",
+        point2: "#F87171",
         background: {
           DEFAULT: "#FFFFFF",
           white: "#FFFFFF",
@@ -184,7 +185,9 @@ module.exports = {
           gray: "#F5F6F7",
           chips: "#F5F6F7",
           placeholder: "#E0E5EA",
-          focus: "#191B1C"
+          focus: "#191B1C",
+          guide: "#E0E5EA",
+
         },
         text: {
           error: "#FA685F",

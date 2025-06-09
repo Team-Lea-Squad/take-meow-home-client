@@ -1,19 +1,20 @@
 import React from "react";
 import Image from "next/image";
+import { Status } from "@/enum/AdoptionStatus";
 
 const highlights = [
   {
     time: "12:00",
     animalName: "초코 여 10살",
     userName: "레아 여 30대",
-    status: "진행중",
+    status: Status.PRE_ADOPTION.name,
     image: "/logo-image.svg"
   },
   {
     time: "14:30",
     animalName: "보리 남 2살",
     userName: "우희 여 30대",
-    status: "대기중",
+    status: Status.PENDING_APPROVAL.name,
     image: "/logo-image.svg"
   }
 ];

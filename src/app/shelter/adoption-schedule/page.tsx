@@ -23,16 +23,23 @@ const Page = () => {
       </div>
       <DateSelector year={currentYear} month={currentMonth} />
       <StatusSummaryCards />
-      {scheduleData?.map((schedule) => (
-        <CatInfoCard
-          key={schedule.id}
-          time={schedule.time}
-          catName={schedule.catName}
-          userName={schedule.userName}
-          status={schedule.status}
-          onClick={() => router.push(`/shelter/detail-cat/${schedule.id}`)}
-        />
-      ))}
+      {scheduleData
+        ?.sort((a, b) => {
+          const timeA = a.time.split(":").map(Number);
+          const timeB = b.time.split(":").map(Number);
+          return timeA[0] * 60 + timeA[1] - (timeB[0] * 60 + timeB[1]);
+        })
+        .map((schedule) => (
+          <CatInfoCard
+            key={schedule?.id}
+            time={schedule?.time}
+            catName={schedule?.catName}
+            userName={schedule?.userName}
+            status={schedule?.status}
+            neutered={schedule?.neutered}
+            onClick={() => router.push(`/shelter/detail-cat/${schedule.id}`)}
+          />
+        ))}
     </div>
   );
 };

@@ -24,7 +24,7 @@ export const scheduleData: ScheduleData[] = [
     id: 2,
     time: "14:30",
     catName: "나비",
-    userName: "민지",
+    userName: "우희",
     status: "상담 완료",
     age: 1,
     gender: "남",
@@ -32,11 +32,21 @@ export const scheduleData: ScheduleData[] = [
   },
   {
     id: 3,
-    time: "16:00",
+    time: "15:00",
     catName: "초코",
-    userName: "지훈",
+    userName: "지안",
     status: "입양 대기",
     age: 3,
+    gender: "여",
+    neutered: true
+  },
+  {
+    id: 4,
+    time: "13:00",
+    catName: "까미",
+    userName: "빈",
+    status: "입양 대기",
+    age: 8,
     gender: "여",
     neutered: true
   }

@@ -4,9 +4,15 @@ import Image from "next/image";
 import CommonButton from "@/components/CommonButton";
 import BottomSheet from "@/components/BottomSheet";
 import BottomSheetContent from "@/components/BottomSheetContent";
+import { useButlerStore } from "@/store/butlerStore";
+import { useRouter } from "next/navigation";
 
 const CatButlerFitCard = () => {
+  const router = useRouter();
   const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const setIsButlerSelected = useButlerStore(
+    (state) => state.setIsButlerSelected
+  );
 
   return (
     <div className="flex flex-col p-4 border border-line-lite rounded-lg gap-2">
@@ -47,7 +53,10 @@ const CatButlerFitCard = () => {
       </div>
       <CommonButton
         title="집사 채택하기"
-        onClick={() => setIsSheetOpen(true)}
+        onClick={() => {
+          setIsSheetOpen(true);
+          setIsButlerSelected(true);
+        }}
       />
       {isSheetOpen && (
         <BottomSheet isOpen={isSheetOpen} onClose={() => setIsSheetOpen(false)}>
@@ -56,6 +65,10 @@ const CatButlerFitCard = () => {
               "집사로 채택하면 취소가 어렵습니다. \n신중하게 채택해주세요."
             }
             buttonTitle="집사 채택하기"
+            onClick={() => {
+              setIsSheetOpen(false);
+              router.push("/shelter/completed-butler");
+            }}
           />
         </BottomSheet>
       )}

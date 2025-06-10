@@ -7,19 +7,29 @@ interface BottomButtonProps {
   buttonTitle: string;
   disabled?: boolean;
   path?: string;
+  onClick?: () => void;
 }
 
-const BottomButton: React.FC<BottomButtonProps> = ({
+const BottomButton = ({
   buttonTitle,
   disabled,
-  path = "/"
-}) => {
+  path,
+  onClick
+}: BottomButtonProps) => {
   const router = useRouter();
+
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+    } else if (path) {
+      router.push(path);
+    }
+  };
 
   return (
     <button
       className={`fixed bottom-0 left-0 right-0 px-600 h-[84px] flex justify-center items-center`}
-      onClick={() => router.push(path)}
+      onClick={handleClick}
       disabled={disabled}
     >
       <div

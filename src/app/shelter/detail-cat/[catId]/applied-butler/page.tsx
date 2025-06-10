@@ -16,7 +16,7 @@ const Page = () => {
         <div
           className="w-full bg-background-chips h-[100px] rounded-lg p-4"
           onClick={() => {
-            router.push(`/shelter/detail-butler/1`);
+            router.push(`/shelter/detail-cat/1/applied-butler/detail-butler/1`);
           }}
         >
           <p>집사 김혜원</p>

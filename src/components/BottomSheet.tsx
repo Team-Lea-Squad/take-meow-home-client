@@ -62,7 +62,10 @@ const BottomSheet: React.FC<BottomSheetProps> = ({
       <div className="fixed inset-0 bg-black bg-opacity-40" onClick={onClose} />
       <div
         ref={sheetRef}
-        className="fixed left-0 right-0 bottom-0 bg-white rounded-t-2xl shadow-xl flex flex-col justify-between "
+        className={`
+          fixed left-0 right-0 bottom-0 bg-white rounded-t-2xl shadow-xl flex flex-col justify-between
+          bottom-sheet-animate
+        `}
         style={{ height, touchAction: "none" }}
       >
         <div

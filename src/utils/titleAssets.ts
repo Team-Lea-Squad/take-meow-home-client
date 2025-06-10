@@ -5,5 +5,6 @@ export const mainTitles = {
   registrationComplete: "정보등록완료,\n승인절차가 필요합니다.",
   appliedAdopter: "가족이 되기 위해\n지원한 집사",
   butlerSelectionComplete:
-    "집사 채택이 완료 되었습니다.🥳\n가족이 될 수 있도록 준비해주세요."
+    "집사 채택이 완료 되었습니다.🥳\n가족이 될 수 있도록 준비해주세요.",
+  adoptionHistory: "집사와 보호소의 분양 기록"
 };

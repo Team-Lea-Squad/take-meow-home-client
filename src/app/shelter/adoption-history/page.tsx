@@ -5,6 +5,7 @@ import MainTitle from "@/components/MainTitle";
 import { mainTitles } from "@/utils/titleAssets";
 import BottomButton from "@/components/BottomButton";
 import { useAdoptionStore } from "@/store/adoptionStore";
+import VisitScheduleCard from "@/components/VisitScheduleCard";
 
 const Page = () => {
   const isAdopted = useAdoptionStore((state) => state.isAdopted);
@@ -42,6 +43,7 @@ const Page = () => {
         <p className="text-paragraph-150-B">2025/06/10 화</p>
         <p>김혜원님이 방문일을 선택하였습니다.</p>
       </div>
+      <VisitScheduleCard />
       <div className="flex flex-col gap-2">
         <p className="text-paragraph-150-B">2025/06/10 화</p>
         <p>김혜원님의 방문일을 수락하였습니다.</p>

@@ -6,12 +6,14 @@ import { mainTitles } from "@/utils/titleAssets";
 import BottomButton from "@/components/BottomButton";
 import { useAdoptionStore } from "@/store/adoptionStore";
 import VisitScheduleCard from "@/components/VisitScheduleCard";
+import { useVisitStore } from "@/store/visitStore";
 
 const Page = () => {
   const isAdopted = useAdoptionStore((state) => state.isAdopted);
   const setIsAdopted = useAdoptionStore((state) => state.setIsAdopted);
   const adoptedTime = useAdoptionStore((state) => state.adoptedTime);
   const setAdoptedTime = useAdoptionStore((state) => state.setAdoptedTime);
+  const { isAccepted } = useVisitStore();
 
   const handleAdopt = () => {
     setIsAdopted(true);
@@ -44,10 +46,16 @@ const Page = () => {
         <p>김혜원님이 방문일을 선택하였습니다.</p>
       </div>
       <VisitScheduleCard />
-      <div className="flex flex-col gap-2">
-        <p className="text-paragraph-150-B">2025/06/10 화</p>
-        <p>김혜원님의 방문일을 수락하였습니다.</p>
-      </div>
+      {!isAccepted && (
+        <div className="flex flex-col gap-2">
+          <p className="text-paragraph-150-B">2025/06/10 화</p>
+          <p>김혜원님의 방문일을 수락하였습니다.</p>
+          <div className="p-2 bg-background-chips rounded-lg text-paragraph-120-B">
+            김혜원님의 방문예정일은 2025/06/10 화요일 오후 18:00 입니다.
+          </div>
+        </div>
+      )}
+
       {isAdopted && (
         <div className="flex flex-col gap-2">
           <p className="text-paragraph-150-B">

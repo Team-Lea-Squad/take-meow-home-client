@@ -1,6 +1,15 @@
+"use client";
+
 import React from "react";
+import { useVisitStore } from "@/store/visitStore";
 
 const VisitScheduleCard = () => {
+  const { isAccepted, setIsAccepted } = useVisitStore();
+
+  const handleAccept = () => {
+    setIsAccepted(true);
+  };
+
   return (
     <div className="flex flex-col p-4 border border-line-lite gap-4">
       <div className="flex flex-col gap-1">
@@ -10,10 +19,17 @@ const VisitScheduleCard = () => {
         </p>
       </div>
       <div className="flex flex-col gap-2">
-        <div className="w-full rounded-lg flex items-center bg-background-chips justify-center p-2 text-paragraph-120-B">
+        <div
+          className={`w-full rounded-lg flex items-center justify-center p-2 text-paragraph-120-B cursor-pointer ${
+            isAccepted ? "bg-black text-white" : "bg-background-chips"
+          }`}
+          onClick={() => {
+            handleAccept();
+          }}
+        >
           수락
         </div>
-        <div className="w-full rounded-lg flex items-center bg-background-chips justify-center p-2 text-paragraph-120-B">
+        <div className="w-full rounded-lg flex items-center bg-background-chips justify-center p-2 text-paragraph-120-B cursor-pointer">
           일정 변경 요청
         </div>
       </div>

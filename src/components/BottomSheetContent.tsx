@@ -3,13 +3,17 @@ import React, { useState } from "react";
 import Image from "next/image";
 import CommonButton from "./CommonButton";
 
-const BottomSheetContent = ({
-  title,
-  buttonTitle
-}: {
+interface BottomSheetContentProps {
   title: string;
   buttonTitle?: string;
-}) => {
+  onClick?: () => void;
+}
+
+const BottomSheetContent = ({
+  title,
+  buttonTitle,
+  onClick
+}: BottomSheetContentProps) => {
   const [isAllAgree, setIsAllAgree] = useState(false);
   const [isAgree, setIsAgree] = useState(false);
 
@@ -64,7 +68,7 @@ const BottomSheetContent = ({
           </div>
         </div>
         <div className="w-full p-600">
-          <CommonButton title={buttonTitle || "시작하기"} />
+          <CommonButton title={buttonTitle || "시작하기"} onClick={onClick} />
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ export interface ScheduleData {
   age: number;
   gender: "남" | "여";
   neutered: boolean;
+  img: string[];
 }
 
 export const scheduleData: ScheduleData[] = [
@@ -18,7 +19,8 @@ export const scheduleData: ScheduleData[] = [
     status: "분양 예정",
     age: 2,
     gender: "여",
-    neutered: true
+    neutered: true,
+    img: ["/img/cat1.jpeg", "/img/cat2.jpg", "/img/cat3.jpeg"]
   },
   {
     id: 2,
@@ -28,7 +30,8 @@ export const scheduleData: ScheduleData[] = [
     status: "상담 완료",
     age: 1,
     gender: "남",
-    neutered: false
+    neutered: false,
+    img: ["/img/cat1.jpeg", "/img/cat2.jpg", "/img/cat3.jpeg"]
   },
   {
     id: 3,
@@ -38,7 +41,8 @@ export const scheduleData: ScheduleData[] = [
     status: "입양 대기",
     age: 3,
     gender: "여",
-    neutered: true
+    neutered: true,
+    img: ["/img/cat1.jpeg", "/img/cat2.jpg", "/img/cat3.jpeg"]
   },
   {
     id: 4,
@@ -48,6 +52,27 @@ export const scheduleData: ScheduleData[] = [
     status: "입양 대기",
     age: 8,
     gender: "여",
-    neutered: true
+    neutered: true,
+    img: ["/img/cat1.jpeg", "/img/cat2.jpg", "/img/cat3.jpeg"]
   }
 ];
+
+export const getScheduleById = (id: number): ScheduleData | undefined => {
+  return scheduleData.find((schedule) => schedule.id === id);
+};
+
+export const getScheduleDetails = (id: number) => {
+  const schedule = getScheduleById(id);
+  if (!schedule) return null;
+
+  return {
+    time: schedule.time,
+    catName: schedule.catName,
+    userName: schedule.userName,
+    status: schedule.status,
+    age: schedule.age,
+    gender: schedule.gender,
+    neutered: schedule.neutered,
+    img: schedule.img
+  };
+};

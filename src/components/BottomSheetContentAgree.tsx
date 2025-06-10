@@ -3,20 +3,14 @@ import React, { useState } from "react";
 import Image from "next/image";
 import CommonButton from "./CommonButton";
 
-const BottomSheetContent = ({
-  title,
-  buttonTitle
-}: {
-  title: string;
-  buttonTitle?: string;
-}) => {
+const BottomSheetContent = () => {
   const [isAllAgree, setIsAllAgree] = useState(false);
   const [isAgree, setIsAgree] = useState(false);
 
   return (
     <div className="flex flex-col justify-between h-full">
       <div className="w-full p-600 items-center">
-        <p className="text-title-120-B whitespace-pre">{title}</p>
+        <p className="text-title-120-B">서비스 이용약관</p>
       </div>
       <div className="flex flex-col justify-between h-full ">
         <div className="w-full py-800 px-600 items-center ">
@@ -64,7 +58,7 @@ const BottomSheetContent = ({
           </div>
         </div>
         <div className="w-full p-600">
-          <CommonButton title={buttonTitle || "시작하기"} />
+          <CommonButton title="시작하기" />
         </div>
       </div>
     </div>

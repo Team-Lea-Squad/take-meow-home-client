@@ -41,7 +41,7 @@ const CatInfoCard = ({
           </div>
           <div className="flex flex-col gpa-2">
             <div className="text-caption-120-B flex gap-1 items-center">
-              {catName} {age}살 {gender}{" "}
+              {catName} {gender} {age}살{" "}
               <div className="text-caption-100-R p-[2px] bg-red-100 rounded-lg px-1 text-red-500">
                 {neutered ? "중성화 완료" : "중성화 전"}
               </div>

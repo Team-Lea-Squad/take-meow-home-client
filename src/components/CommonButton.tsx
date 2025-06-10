@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 
@@ -6,16 +7,21 @@ interface CommonButtonProps {
   isDisabled?: boolean;
   isPoint?: boolean;
   isLoading?: boolean;
+  onClick?: () => void;
 }
 
 const CommonButton = ({
   title,
   isDisabled = false,
   isPoint = false,
-  isLoading = false
+  isLoading = false,
+  onClick
 }: CommonButtonProps) => {
   return (
-    <div
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={isDisabled}
       className={`w-full h-[52px] rounded-xl flex items-center justify-center p-600 text-paragraph-120-R text-white ${
         isDisabled
           ? "bg-background-guide"
@@ -69,7 +75,7 @@ const CommonButton = ({
       ) : (
         <p className={isDisabled ? "text-gray-400" : "text-white"}>{title}</p>
       )}
-    </div>
+    </button>
   );
 };
 

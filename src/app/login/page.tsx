@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Bottom from "./_components/Bottom";
 import { useRouter } from "next/navigation";
 import BottomSheet from "@/components/BottomSheet";
-import BottomSheetContent from "@/components/BottomSheetContent";
+import BottomSheetContent from "@/components/BottomSheetContentAgree";
 
 const Page = () => {
   const router = useRouter();

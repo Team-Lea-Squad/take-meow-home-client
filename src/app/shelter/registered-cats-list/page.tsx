@@ -1,5 +1,5 @@
 import React from "react";
-import SubTitle from "@/components/SubTitle";
+import { SubTitle } from "@/components/SubTitle";
 
 const Page = () => {
   return (

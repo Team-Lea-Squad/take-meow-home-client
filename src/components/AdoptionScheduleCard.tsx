@@ -14,13 +14,13 @@ const AdoptionScheduleCard = ({
 }: AdoptionScheduleCardProps) => {
   const router = useRouter();
   return (
-    <div className="rounded-lg p-500 bg-background-chips gap-2 flex flex-col">
-      <div
-        className="text-text-black text-paragraph-150-B flex items-center"
-        onClick={() => {
-          router.push("/shelter/adoption-schedule");
-        }}
-      >
+    <div
+      className="rounded-lg p-500 bg-background-chips gap-2 flex flex-col cursor-pointer"
+      onClick={() => {
+        router.push("/shelter/adoption-schedule");
+      }}
+    >
+      <div className="text-text-black text-paragraph-150-B flex items-center">
         분양 일정보기
         <Image
           src="/icons/arrow-right.svg"

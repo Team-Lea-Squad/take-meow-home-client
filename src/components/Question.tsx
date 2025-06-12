@@ -10,6 +10,8 @@ export const SubTitle = ({ subTitle }: SubTitleProps) => {
   );
 };
 
-export const QuestionTitle = ({ subTitle }: SubTitleProps) => {
-  return <div className="text-body-150-B text-text-black py-2">{subTitle}</div>;
+export const Question = ({ subTitle }: SubTitleProps) => {
+  return (
+    <div className="text-paragraph-120-B text-text-black py-2">{subTitle}</div>
+  );
 };

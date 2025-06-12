@@ -3,7 +3,7 @@ import MainTitle from "@/components/MainTitle";
 import { QuestionTitle } from "@/components/SubTitle";
 import { registerCatAssets } from "@/utils/registerCatAssets";
 import InputForm from "@/components/InputForm";
-import ToggleButton from "./_components/toggleButton";
+import ToggleButton from "./_components/ToggleButton";
 
 const Page = () => {
   return (

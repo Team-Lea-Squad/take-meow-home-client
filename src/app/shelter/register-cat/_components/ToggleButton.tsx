@@ -27,10 +27,10 @@ const ToggleButton = ({ onSelect }: ToggleButtonProps) => {
         rounded-lg
         text-paragraph-120-B
         transition-colors
-        border
+        
         ${
           selected === text
-            ? "border-primary bg-white text-primary"
+            ? "border-primary bg-white text-primary border-2"
             : "border-gray-200 bg-gray-100 text-gray-600 hover:border-primary"
         }
       `}

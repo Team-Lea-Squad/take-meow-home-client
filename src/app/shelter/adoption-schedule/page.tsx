@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import SubTitle from "@/components/SubTitle";
+import { SubTitle } from "@/components/SubTitle";
 import DateSelector from "@/components/DateSelector";
 import StatusSummaryCards from "../_components/StatusSummaryCards";
 import CatInfoCard from "@/components/CatInfoCard";

@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 interface InputFormProps {
-  label: string;
-  placeholder: string;
+  label?: string;
+  placeholder?: string;
   isRequired?: boolean;
   isNumber?: boolean;
   value?: string;

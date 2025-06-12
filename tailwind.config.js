@@ -192,7 +192,8 @@ module.exports = {
       colors: {
         white: "#FFFFFF",
         black: "#000000",
-        primary: "#00CC51",
+        primary: "#006400",
+        primary2: "#00CC51",
         point2: "#F87171",
         background: {
           DEFAULT: "#FFFFFF",

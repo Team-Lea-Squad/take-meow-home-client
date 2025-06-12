@@ -6,5 +6,6 @@ export const mainTitles = {
   appliedAdopter: "가족이 되기 위해\n지원한 집사",
   butlerSelectionComplete:
     "집사 채택이 완료 되었습니다.🥳\n가족이 될 수 있도록 준비해주세요.",
-  adoptionHistory: "집사와 보호소의 분양 기록"
+  adoptionHistory: "집사와 보호소의 분양 기록",
+  registerCat: "고양이 정보를 등록해주세요."
 };

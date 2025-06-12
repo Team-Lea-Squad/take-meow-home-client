@@ -18,7 +18,12 @@ const RegisterCatCard = () => {
         >{`등록된 고양이가 없습니다. \n고양이를 등록해주세요.`}</p>
       )}
 
-      <div className="text-text-black text-paragraph-150-B flex items-center">
+      <div
+        className="text-text-black text-paragraph-150-B flex items-center"
+        onClick={() => {
+          router.push("/shelter/register-cat");
+        }}
+      >
         고양이 등록하기
         <Image
           src="/icons/arrow-right.svg"

@@ -9,7 +9,8 @@ const CatBasicInfo = () => {
   const [inputs, setInputs] = useState({
     catName: "",
     catAge: "",
-    catGender: ""
+    catGender: "",
+    catWeight: ""
   });
 
   return (
@@ -43,10 +44,10 @@ const CatBasicInfo = () => {
           <div className="p-2 w-1/3 items-center justify-center">몸무게</div>
           <InputForm
             rightText="kg"
-            value={inputs.catGender}
+            value={inputs.catWeight}
             isNumber
             onChange={(e) =>
-              setInputs({ ...inputs, catGender: e.target.value })
+              setInputs({ ...inputs, catWeight: e.target.value })
             }
           />
         </div>

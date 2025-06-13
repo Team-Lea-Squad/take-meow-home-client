@@ -17,6 +17,7 @@ const CatBasicInfo = () => {
       <div className="flex flex-col gap-2">
         <MainTitle mainTitle={registerCatAssets.name.title} />
         <InputForm
+          placeholder="ex) 루미"
           value={inputs.catName}
           onChange={(e) => setInputs({ ...inputs, catName: e.target.value })}
         />
@@ -25,7 +26,7 @@ const CatBasicInfo = () => {
         <MainTitle mainTitle={registerCatAssets.physical.title} />
         <div className="w-full flex gap-4 justify-center items-center">
           <div className="p-2 w-1/3 items-center justify-center">성별</div>
-          <ToggleButton />
+          <ToggleButton toggleText={["남아", "여아", "모름"]} />
         </div>
         <div className="w-full flex gap-4 justify-center items-center">
           <div className="p-2 w-1/3 items-center justify-center">나이</div>

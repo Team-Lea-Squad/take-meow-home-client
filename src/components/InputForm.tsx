@@ -10,6 +10,7 @@ interface InputFormProps {
   isNumber?: boolean;
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  rightText?: string;
 }
 
 const InputForm = ({
@@ -18,7 +19,8 @@ const InputForm = ({
   isRequired = false,
   isNumber = false,
   value = "",
-  onChange
+  onChange,
+  rightText
 }: InputFormProps) => {
   const [, setValue] = useState("");
   const [isFocused, setIsFocused] = useState(false);
@@ -51,6 +53,11 @@ const InputForm = ({
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
         />
+        {rightText && (
+          <span className="flex items-center text-text-lite px-3">
+            {rightText}
+          </span>
+        )}
         {isFocused && value && (
           <Image
             src="/icons/form-close.svg"

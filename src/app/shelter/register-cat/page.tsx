@@ -20,6 +20,10 @@ const Page = () => {
             <ToggleButton />
           </div>
         </div>
+        <div className="flex flex-col gap-2">
+          <MainTitle mainTitle={registerCatAssets[0].기본정보[2].title} />
+          <InputForm />
+        </div>
       </div>
     </div>
   );

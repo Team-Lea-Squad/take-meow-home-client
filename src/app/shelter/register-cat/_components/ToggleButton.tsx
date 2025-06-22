@@ -2,11 +2,11 @@
 import React, { useState } from "react";
 
 interface ToggleButtonProps {
+  toggleText: string[];
   onSelect?: (value: string) => void;
 }
 
-const ToggleButton = ({ onSelect }: ToggleButtonProps) => {
-  const toggleText = ["남아", "여아", "모름"];
+const ToggleButton = ({ onSelect, toggleText }: ToggleButtonProps) => {
   const [selected, setSelected] = useState<string>("");
 
   const handleClick = (text: string) => {

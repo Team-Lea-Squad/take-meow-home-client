@@ -5,6 +5,7 @@ import MainTitle from "@/components/MainTitle";
 import { mainTitles } from "@/utils/titleAssets";
 import AddButler from "@/components/AddButler";
 import Quiz from "@/components/Quiz";
+import NewCats from "@/components/NewCats";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <MainTitle mainTitle={mainTitles.homeTitle} userName="냥냥냥" />
       <AddButler />
       <Quiz />
+      <NewCats />
       {/* <SubTab />
       <CommonButton title="테스트버튼" isDisabled />
       <CommonButton title="테스트버튼" isPoint />

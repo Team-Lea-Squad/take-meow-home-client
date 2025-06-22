@@ -52,7 +52,7 @@ const Header = () => {
         />
       )}
       {isHome && (
-        <div className="flex gap-1 h-5">
+        <div className="flex gap-1 h-5 text-body-120-M">
           알림
           <div className="rounded-full bg-red-600 w-[6px] h-[6px]"></div>
         </div>

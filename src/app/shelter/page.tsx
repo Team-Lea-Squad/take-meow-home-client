@@ -13,7 +13,7 @@ const Page = () => {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-2">
-        <MainTitle mainTitle={mainTitles.shelterHome} name="냥냥냥" />
+        <MainTitle mainTitle={mainTitles.shelterHome} shelterName="냥냥냥" />
         <div
           className="text-text-lite text-paragraph-120-B"
           onClick={() => {

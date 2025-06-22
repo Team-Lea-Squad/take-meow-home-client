@@ -7,5 +7,6 @@ export const mainTitles = {
   butlerSelectionComplete:
     "집사 채택이 완료 되었습니다.🥳\n가족이 될 수 있도록 준비해주세요.",
   adoptionHistory: "집사와 보호소의 분양 기록",
-  registerCat: "고양이 정보를 등록해주세요."
+  registerCat: "고양이 정보를 등록해주세요.",
+  homeTitle: "나 데리러 올 거냥? \n기다리고 있냥!"
 };

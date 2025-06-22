@@ -57,46 +57,48 @@ const NewCats = () => {
   ];
 
   return (
-    <div className=" w-full py-7 gap-4 flex flex-col">
+    <div className=" w-full gap-4 flex flex-col">
       <p className="text-title-120-B">새로운 친구가 찾아왔어요</p>
-      <div className="flex gap-4 overflow-x-auto w-full">
-        {catList.map((cat) => (
-          <div
-            key={cat.id}
-            className="flex flex-col p-2 gap-2 rounded-2xl shadow-[4px_4px_20px_rgba(0,0,0,0.08)] w-[176px] flex-shrink-0"
-          >
-            <div className="relative">
-              <Image
-                src={cat.imgSrc}
-                alt="cat-image"
-                width={160}
-                height={160}
-                className="w-[160px] h-[160px] rounded-xl object-cover"
-              />
-              <div
-                className="absolute bottom-2 right-2 rounded-full bg-black w-10 h-10 flex justify-center items-center cursor-pointer"
-                onClick={() => toggleLike(cat.id)}
-              >
+      <div className="w-full overflow-x-auto hide-scrollbar">
+        <div className="flex w-fit gap-4 pb-4">
+          {catList.map((cat) => (
+            <div
+              key={cat.id}
+              className="flex flex-col p-2 gap-2 rounded-2xl shadow-[4px_4px_20px_rgba(0,0,0,0.08)] w-[176px] flex-shrink-0"
+            >
+              <div className="relative">
                 <Image
-                  src={
-                    likes[cat.id]
-                      ? "/icons/like-heart-on.svg"
-                      : "/icons/like-heart-off.svg"
-                  }
-                  alt="like-heart-off"
-                  width={24}
-                  height={24}
+                  src={cat.imgSrc}
+                  alt="cat-image"
+                  width={160}
+                  height={160}
+                  className="w-[160px] h-[160px] rounded-xl object-cover"
                 />
+                <div
+                  className="absolute bottom-2 right-2 rounded-full bg-black w-10 h-10 flex justify-center items-center cursor-pointer"
+                  onClick={() => toggleLike(cat.id)}
+                >
+                  <Image
+                    src={
+                      likes[cat.id]
+                        ? "/icons/like-heart-on.svg"
+                        : "/icons/like-heart-off.svg"
+                    }
+                    alt="like-heart-off"
+                    width={24}
+                    height={24}
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col h-[50px] px-3 py-2 gap-1">
+                <p className="text-paragraph-120-B">
+                  {cat.name} {cat.gender} {cat.age}
+                </p>
+                <div className="text-paragraph-120-R">{cat.shelter}</div>
               </div>
             </div>
-            <div className="flex flex-col h-[50px] px-3 py-2">
-              <p className="text-paragraph-120-B">
-                {cat.name} {cat.gender} {cat.age}
-              </p>
-              <div className="text-paragraph-120-R">{cat.shelter}</div>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

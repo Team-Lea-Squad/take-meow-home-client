@@ -22,7 +22,7 @@ const NewShelter = () => {
       name: "용인시 동물보호센터",
       address: "경기도 용인시 처인구 포곡읍",
       registeredCats: 12,
-      imgSrc: "/img/shelter1.jpg"
+      imgSrc: "/img/shelter2.jpg"
     },
     {
       id: 4,
@@ -36,21 +36,21 @@ const NewShelter = () => {
       name: "고양이 정원",
       address: "서울 강서구 개화동로19길 18",
       registeredCats: 7,
-      imgSrc: "/img/shelter1.jpg"
+      imgSrc: ""
     }
   ];
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-4">
       <p className="text-title-120-B">신규 보호소 소식</p>
       <div className="flex flex-col gap-2">
         {shelterList.map((shelter) => (
           <div
             key={shelter.id}
-            className="flex px-2 items-center gap-2 h-[96px]"
+            className="flex px-2 items-center gap-2 h-[96px] shadow-[4px_4px_20px_rgba(0,0,0,0.08)] rounded-lg"
           >
             <Image
-              src={shelter.imgSrc}
+              src={shelter.imgSrc || "/img/shelter-default.svg"}
               alt="shelter-image"
               width={80}
               height={80}
@@ -59,7 +59,11 @@ const NewShelter = () => {
             <div className="flex flex-col justify-between w-full h-[60px]">
               <div className="flex flex-col gap-1">
                 <p className="text-paragraph-120-B">{shelter.name}</p>
-                <p className="text-paragraph-120-R">{shelter.address}</p>
+                <p className="text-paragraph-120-R">
+                  {shelter.address.length > 20
+                    ? `${shelter.address.slice(0, 21)}...`
+                    : shelter.address}
+                </p>
               </div>
               <div className="flex items-center">
                 <Image
@@ -73,6 +77,12 @@ const NewShelter = () => {
                 </p>
               </div>
             </div>
+            <Image
+              src="/icons/arrow-right-gray.svg"
+              alt="arrow-button"
+              width={18}
+              height={18}
+            />
           </div>
         ))}
       </div>

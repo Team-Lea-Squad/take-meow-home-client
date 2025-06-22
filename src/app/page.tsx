@@ -6,6 +6,7 @@ import { mainTitles } from "@/utils/titleAssets";
 import AddButler from "@/components/AddButler";
 import Quiz from "@/components/Quiz";
 import NewCats from "@/components/NewCats";
+import NewShelter from "@/components/NewShelter";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <AddButler />
       <Quiz />
       <NewCats />
+      <NewShelter />
       {/* <SubTab />
       <CommonButton title="테스트버튼" isDisabled />
       <CommonButton title="테스트버튼" isPoint />
